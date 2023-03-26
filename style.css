@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    position: relative;
+}
+
+.btn-cta {
+    border: solid 1.5px;
+    border-radius: 34px;
+    padding: 16px 42px;
+    font-size: 18px;
+    font-family: 'Dunbar Text Regular';
+    cursor: pointer;
+    background-color: transparent;
+}
+.btn-cta-white {border-color: #ffffff; color: #ffffff;}
+.btn-cta-white:hover {background-color: #F16F51; border-color: #F16F51; color: #ffffff;}
+.btn-cta-black {border-color: #000000; color: #000000;}
+.btn-cta-black:hover {background-color: #000000; color: #ffffff; border-color: #000000;}
+
+.salmon {
+    color: #F16F51;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'Dunbar Text Regular';
+    src: url("fonts/DunbarText-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Apfel Grotezk Regular";
+    src: url("fonts/ApfelGrotezk-Regular.woff");
+}
+
+.lustsans {
+    font-family: "lust-sans", sans-serif;
+    font-weight: 700; /* bold */
+    font-style: normal;
+    font-size: 43px;
+}
+
+.dunbar {
+    font-size: 16px;
+    font-family: "Dunbar Text Regular";
+    margin: 24px 0px 52px 0px;
+}
+
+.filson {
+    font-family: "filson-pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+}
+
+/* HEADER */
+
+header {
+    background-color: #000000;
+    font-family: 'Dunbar Text Regular';
+    border-bottom: solid 1.5px #F16F51;
+    padding: 15px 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#logo-header {
+    width: 162px;
+    height: 73px;
+}
+
+#nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+li {
+    line-height: 26px;
+}
+li:hover {
+    color: #F16F51;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+    li {font-size: 16px;}
+}
+
+.sidenav, #openBtn {display: none;}
+
+/* MAIN SECTION */
+
+main {
+    padding-top: 115px;
+}
+
+/* SECTION 1 */
+
+#section-1 {
+    padding: 59px 48px 0px 62px;
+    width: 100%;
+    display: flex;
+    gap: 5.2%; /* ~75px on a 1440px screen */
+}
+
+.s1-left {width: 50%; padding: 71px 12px 0px 0px;}
+.s1-left button {margin-bottom: 74px;}
+
+.s1-right {
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("images/photo-accueil-header-equipe-cabinet-gsexpertise@2x.png");
+}
+.s1-right:hover {
+    background-image: url("images/photo-accueil-rose-header-equipe-cabinet-gsexpertise@2x.png");
+}
+
+#img-s1-right {
+    width: 100%;
+    height: auto;
+}
+
+/* SCROLLING BANNER SECTION */
+
+#scrolling-banner {
+    width: 100%;
+    padding: 30px 0px;
+    border-top: solid 1.5px #ffffff;
+    border-bottom: solid 1.5px #ffffff;
+    overflow: hidden;
+    margin-top: 82.5px;
+}
+#scrolling-banner span {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%; 
+    animation: horizontal-animation 15s infinite linear;
+}
+
+#scrolling-banner:hover > span {
+    animation-play-state: paused; /* pause the animation */
+}
+
+@keyframes horizontal-animation {
+    0% {
+      transform: translate3d(0,0,0);      /* initial position on the right */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* final position on the left */
+    }
+}
+
+/* SECTION 2 */
+
+#section-2 {
+    width: 100%;
+    padding-right: 4.3%; /* ~62px on a 1440px screen */
+    display: flex;
+    gap: 4.8%; /* ~69px on a 1440px screen */
+}
+
+.s2-left {
+    width: 45.8%;
+    background-image: url("images/photo-accueil-cabinet-meeting@2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.s2-left:hover {
+    background-image: url("images/photo-accueil-rose-cabinet-meeting@2x.png");
+}
+
+.s2-right {
+    width: 49.4%;
+    padding-top: 125px;
+}
+.s2-right button {margin-bottom: 147px;}
+
+
+/* SECTION 3 */
+
+#section-3 {
+    padding: 66.5px 0px 137px 0px;
+    color: #000000;
+    background-color: #F8CDC5;
+}
+.s3-h2 {
+    text-align: center; 
+    padding: 0px 27.4% 0px 27.4%; /* 27.4% = ~395px on a 1440px screen */
+}
+.s3-p {
+    text-align: center; 
+    padding: 0px 23.3%; /* ~336px on a 1440px screen */
+    margin-bottom: 67px;
+}
+
+.none {display: none;}
+
+#solutions {
+    margin-bottom: 198.5px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 54px;
+    row-gap: 100px;
+    flex-wrap: wrap;
+    padding: 0px 100px 0px 62px;
+}
+#solutions h3 {
+    text-transform: uppercase;
+    font-family: "Dunbar Text Regular";
+    font-size: 31px;
+}
+#solutions img {
+    width: 385px;
+    height: 203px;
+}
+
+.sub-block {
+    background-color: #ffffff;
+    width: 390px;
+    height: 248px;
+    padding: 23px 31px 54px 30px;
+    border: solid 1.5px #000000;
+}
+
+.s-description {
+    font-size: 16px;
+    font-family: "Dunbar Text Regular";
+    margin: 0;
+    margin-top: 14px !important;
+    display: none;
+}
+
+.soluce {
+    position: relative;
+}
+.soluce img {
+    position: absolute;
+    bottom: -48px;
+    left: 43px;
+}
+
+#devis {
+    background-color: #F1AA9D;
+    margin: 0px 7.43%; /* 7.43% = ~107px on a 1440px screen */
+    text-align: center;
+    padding: 55px 55px 42px 55px;
+    border: solid 3px #F16F51;
+    position: relative;
+}
+#devis button {margin-top: 42px; z-index: 1; position: relative;}
+#devis img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* width: 23.4%; ~287px on a 1440px screen */
+    /* height: auto; */
+}
+#devis h2 {z-index: 1; position: relative;}
+
+/* ANIMATION ON HOVER */
+
+.soluce:hover > .sub-block > h3 {
+    color: #EE6F52;
+}
+.soluce:hover > img {
+    bottom: -173px;
+}
+.soluce:hover > .sub-block > p {
+    display: block;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #000000;
+    position: relative;
+    padding: 82px 8.75% 18px 11.94%; /* 8.75% = 126px and 11.94% = ~172px on a 1440px screen*/
+}
+
+#footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 105px;
+}
+
+#f-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+#f-col-left div {
+    display: flex;
+    gap: 19px;
+}
+
+.location img {width: 21px;}
+
+#f-col-right {
+    width: 37.15%;
+    padding-top: 47px;
+    position: relative;
+    z-index: 1;
+}
+#f-col-right p {
+    font-family: "Apfel Grotezk Regular";
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 16px;
+}
+#f-col-right input {
+    width: 100%;
+    margin: 42px 0px 52px 0px;
+    padding: 17px 27px;
+    font-family: "Dunbar Text Regular";
+    font-size: 16px;
+    background-color: #F8CDC5;
+    border: solid 2px #F16F51;
+    z-index: 1;
+}
+#f-col-right input::placeholder {opacity: 1;}
+
+#f-col-right button {background-color: #000000;}
+#f-col-right button:hover {background-color: #F16F51;}
+
+#credits {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    justify-content: center;
+}
+
+#forme-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* width: 17.7%; */
+}
+
+
+/* RESPONSIVE */
+
+/* Tablet screen: landscape format */
+
+@media screen and /* (min-width: 900px) and */ (max-width: 1023px) {
+
+    /* header */
+    .btn-cta {
+        padding: 13px 20px;
+        font-size: 16px;
+    }
+
+    #nav {
+        gap: 30px;
+    }
+
+    #logo-header {
+        width: 150px;
+        height: auto;
+    }
+
+    .lustsans {
+        font-size: 35px;
+    }
+
+    .dunbar {
+        font-size: 14px;
+    }
+
+    /* section 1 */
+    .s1-left {
+        padding-top: 30px;
+    }
+
+    /* section 3 */
+    .s3-h2 {
+        padding: 0px 20%;
+    }
+    .s3-p {
+        padding: 0px 18%;
+    }
+
+    .soluce:hover > img {
+        bottom: -140px;
+    }
+
+    /* footer */
+    .filson {
+        font-size: 15px;
+    }
+
+    .logo-footer {
+        width: 250px;
+        height: auto;
+    }
+
+    #f-col-right input {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet screen: portrait format */
+@media screen /* and (min-width: 768px) */ and (max-width: 899px) {
+    
+    /* header */
+    #logo-header {
+        width: 140px;
+    }
+    #nav .btn-cta {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    #nav {
+        gap: 20px;
+    }
+
+    li {
+        font-size: 13px;
+    }
+
+    /* section scrolling banner */
+    #scrolling-banner {padding: 25px 0px;}
+
+    /* section 3 */
+    #devis img {
+        width: 200px;
+    }
+
+    /* footer */
+    .logo-footer {
+        width: 230px;
+        height: auto;
+    }
+
+    #credits span {
+        font-size: 13px;
+    }
+}
+
+/* Mobile screen */
+@media screen and (max-width: 767px) {
+
+    .lustsans {font-size: 30px;}
+
+    /* header */
+    header {padding: 15px 25px;}
+    #logo-header {width: 115px;}
+    
+    #nav {display: none;}
+
+    /* burger menu */
+        /* Sidenav */
+        .sidenav, #openBtn {display: block;}
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: -250px;
+            background-color: #000000;
+            padding-top: 150px;
+            transition: right 0.5s ease;
+        }
+
+        .sidenav li {
+            /* padding: 8px 8px 8px 32px; */
+            font-size: 16px;
+            transition: 0.3s;
+            list-style-type: none;
+        }
+        
+        .sidenav ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            padding: 0px 30px;
+        }
+
+        #navburger li:last-child {
+            padding: 10px 42px;
+            position: absolute;
+            bottom: 50px;
+        }
+
+        /* Active class */
+        .sidenav.active {
+            right: 0;
+        }
+
+        #openBtn {cursor: pointer;}
+
+        /* Close btn */
+        .sidenav .close {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+        #closeBtn:hover {color: #F16F51;}
+        
+        .burger-icon span {
+            display: block;
+            width: 35px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+        }
+
+    /* section 1 */
+    #section-1 {
+        padding: 30px 5% 0px 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .s1-left {order: 2; width: 100%; display: flex; flex-direction: column; align-items: center;}
+    .s1-left h2 {text-align: center;}
+    .s1-left p {text-align: justify;}
+    .s1-left button {margin-bottom: 0px;}
+    
+    .s1-right {
+        width: 100%;
+        height: 33vh;
+        background-size: contain;
+        order: 1;
+    }
+
+    /* banner */
+
+    #scrolling-banner {padding: 20px 0px; margin-top: 100px;}
+    
+    /* section 2 */
+    #section-2 {
+        width: 100%;
+        display: block;
+        padding-right: 0px;
+    }
+    
+    .s2-left {
+        width: 100%;
+        background-size: cover;
+        height: 50vh;
+    }
+    
+    .s2-right {
+        width: 100%;
+        padding: 60px 6% 0px 6%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .s2-right h2 {text-align: center;}
+    .s2-right p {text-align: justify;}
+    .s2-right button {margin-bottom: 100px;}
+
+    /* section 3 */
+    #section-3 {
+        padding-bottom: 100px;
+    }
+    .s3-h2 {
+        padding: 0px 5%;
+    }
+    .s3-p {padding: 0px 5%;}
+
+    #devis {padding: 45px;}
+
+    #solutions {padding: 0px 6%; margin-bottom: 160px;}
+    #solutions img {
+        width: 320px;
+        height: auto;
+    }
+
+    .sub-block {
+        width: 350px;
+        height: 230px;
+    }
+
+    .soluce:hover > img {bottom: -130px;}
+
+
+    /* footer */
+    #footer-columns {
+        display: block;
+    }
+
+    #f-col-left, #f-col-right {width: 100%;}
+
+    .logo-footer {width: 200px;}
+    /* #f-col-left:nth-child(1) {align-items: center;} */
+
+    footer {padding: 50px 6% 18px 6%;}
+}
