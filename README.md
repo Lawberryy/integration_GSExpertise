@@ -7,6 +7,8 @@ Il s'agissait d'un test technique.
 
 Vous pouvez retrouver le visuel de la maquette intégrée juste [ici](https://xd.adobe.com/view/9c51b3c2-9cf6-4b73-8b1d-20f7c1bd4925-c902/).
 
+Pour visiter la page, c'est par [ici](https://integration-gsexpertise.vercel.app/).
+
 
 ## EN
 
